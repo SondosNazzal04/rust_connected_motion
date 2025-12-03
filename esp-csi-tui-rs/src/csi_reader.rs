@@ -9,7 +9,7 @@ pub async fn run_listener(tx: mpsc::Sender<Vec<f64>>) {
 
     // 1. SPAWN THE CLI TOOL
     // We use the Linux path because you are on WSL
-    let mut child = Command::new("esp-csi-cli-rs")
+    let mut child = Command::new("cat")
         .arg("--port")
         .arg("/dev/ttyUSB0")
         // Add other args if the tool needs them (e.g. baud rate)
